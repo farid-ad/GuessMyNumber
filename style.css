@@ -14,10 +14,14 @@ html {
 body {
     font-family: 'Press Start 2P', sans-serif;
     color: aqua;
-    background-color: black;
+    background-color: rgb(44, 43, 43);
     /* background-color: greenyellow; */
 }
-
+#canvas {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
 /* LAYOUT */
 
 header {
