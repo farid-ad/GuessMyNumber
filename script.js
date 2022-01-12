@@ -19,6 +19,9 @@ document.querySelector('.check').addEventListener('click', function () {
         document.querySelector('.message').textContent =
             'Congratulation! you guess the correct number🎉'
         document.querySelector('.number').style.width = '30rem'
+
+        // To show the firewokr when you guess the nmber
+        showFirework()
         if (score > highScore) {
             highScore = score
             document.querySelector('.highscore').textContent = highScore
@@ -86,5 +89,6 @@ document.querySelector('.again').addEventListener('click', function () {
     document.querySelector('.guess').value = ''
     document.querySelector('.number').style.width = '15rem'
     document.querySelector('.number').textContent = '?'
+
     // highScore = score
 })
