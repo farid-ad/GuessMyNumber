@@ -3,14 +3,15 @@
 let score = 25
 let highScore = 0
 let secretNumber = Math.floor(Math.random() * 50 + 1)
-console.log(secretNumber)
+// console.log(secretNumber)
 function displayMessage(message) {
     document.querySelector('.message').textContent = message
 }
 
 document.querySelector('.check').addEventListener('click', function () {
     const guess = Number(document.querySelector('.guess').value)
-    console.log(guess)
+    // console.log(guess)
+
     // When there is no input
     if (!guess) {
         document.querySelector('.message').textContent =
