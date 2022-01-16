@@ -4,6 +4,9 @@ let score = 25
 let highScore = 0
 let secretNumber = Math.floor(Math.random() * 50 + 1)
 console.log(secretNumber)
+function displayMessage(message) {
+    document.querySelector('.message').textContent = message
+}
 
 document.querySelector('.check').addEventListener('click', function () {
     const guess = Number(document.querySelector('.guess').value)
@@ -21,13 +24,12 @@ document.querySelector('.check').addEventListener('click', function () {
         document.querySelector('.number').style.width = '30rem'
 
         // To show the firewokr when you guess the nmber
-        showFirework()
+        document.getElementById('canvas').classList.remove('hidden')
+
         if (score > highScore) {
             highScore = score
             document.querySelector('.highscore').textContent = highScore
         }
-
-        // document.querySelector('canvas').show() // trying to show the fire work when the player wins
 
         // When guess is to low
     } else if (guess <= secretNumber - 15) {
@@ -89,6 +91,7 @@ document.querySelector('.again').addEventListener('click', function () {
     document.querySelector('.guess').value = ''
     document.querySelector('.number').style.width = '15rem'
     document.querySelector('.number').textContent = '?'
+    document.getElementById('canvas').classList.add('hidden')
 
     // highScore = score
 })
